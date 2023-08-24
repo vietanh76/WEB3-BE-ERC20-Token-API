@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@types/koa": "^2.13.8",
+    "@types/koa-router": "^7.4.4",
+    "@types/node": "^20.5.3",
+    "ethers": "^6.7.1",
+    "koa": "^2.14.2",
+    "nvm": "^0.0.4",
+    "typescript": "^5.1.6",
+    "web3": "^4.1.1"
+  }
+}
