@@ -27,3 +27,4 @@ In this task, you must build an API allowing users to get data from a smart cont
 * [Application Binary Interface (ABI)](https://docs.soliditylang.org/en/v0.8.20/abi-spec.html)
 * [Working with ethers.js](https://docs.ethers.org/v6/getting-started)
 * [ERC-20: Token Standard](https://eips.ethereum.org/EIPS/eip-20)
+
