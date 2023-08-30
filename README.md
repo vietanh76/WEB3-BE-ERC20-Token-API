@@ -48,32 +48,60 @@ npm run start
 ## 5. Call API to read smart contract
 5.1 Endpoint: 
 ```shell
-http://localhost:${PORT}/smart-contract/read
+# get name
+http://localhost:${PORT}/read-smart-contract/name
+# get symbol
+http://localhost:${PORT}/read-smart-contract/symbol
+# get decimals
+http://localhost:${PORT}/read-smart-contract/decimals
+# get balanceOf
+http://localhost:${PORT}/read-smart-contract/balanceOf
+# get totalSupply
+http://localhost:${PORT}/read-smart-contract/totalSupply
+# get allowance
+http://localhost:${PORT}/read-smart-contract/allowance
 ```
 5.2 Body request:
 ```shell
 # Example body request
 {
-    "address": "0xC18360217D8F7Ab5e7c516566761Ea12Ce7F9D72",
-    "network": "homestead"
+    "address": "0xA36755735977F9cc24a91532652ad1AEF4707771",
+    "network": "sepolia",
+    "account": "0x718d5D3EFCe30C04D960DD8DdeC166c04349ab30",
+    "owner": "0x718d5D3EFCe30C04D960DD8DdeC166c04349ab30",
+    "spender": "0xebE5F4ED7ceD336A82aA107c27346CFCC5385fd7"
 }
 ```
 The correct result when read smart contract successfully like:
 ```shell
+# result for get name
 {
     "success": true,
-    "message": {
-        "name": "Ethereum Name Service",
-        "symbol": "ENS",
-        "totalSupply": {
-            "type": "BigNumber",
-            "hex": "0x52b7d2dcc80cd2e4000000"
-        },
-        "balanceOf": {
-            "type": "BigNumber",
-            "hex": "0xe6cb7e53f754b200"
-        },
-        "decimals": 18
-    }
+    "message": "Token ITS"
+}
+# result for get symbol
+{
+    "success": true,
+    "message": "ITS"
+}
+# result for get decimals
+{
+    "success": true,
+    "message": 18
+}
+# result for get balanceOf
+{
+    "success": true,
+    "message": "9990000000010000000198"
+}
+# result for get totalSupply
+{
+    "success": true,
+    "message": "11205479000000010000123667"
+}
+# result for get allowance
+{
+    "success": true,
+    "message": "0"
 }
 ```
